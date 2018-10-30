@@ -1,0 +1,26 @@
+version: '2'
+services:
+  atci-app:
+    build: .
+    links:
+      - atci-app-db
+    volumes:
+      - ~/git/dev/atci-app:/var/www/atci-app
+      - ./000-default.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - "8080:80"
+  atci-app-db:
+    image: mysql:5.7
+    volumes:
+      #execute the contained sql files on startup
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "atci"
+  mailhog:
+    image: mailhog/mailhog:v1.0.0
+    ports:
+      - "1025:1025"
+      - "8025:8025"
