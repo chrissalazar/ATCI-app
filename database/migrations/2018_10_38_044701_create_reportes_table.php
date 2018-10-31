@@ -19,12 +19,11 @@ class CreateReportesTable extends Migration
             $table->string('folio')->unique();
             $table->string('titulo');
             $table->string('descripcion');
+            $table->string('colonia');
             $table->string('observacion')->nullable();
             $table->string('comentario')->nullable();
             $table->string('estado');
             $table->string('etapa');
-            $table->string('colonia');
-            $table->integer('categoria');
             $table->timestamps();
 
             $table->foreign('ciudadano_id')->references('id')->on('ciudadanos');

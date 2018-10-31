@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
         /*
          * Application Service Providers...
@@ -159,6 +160,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * phpStorm Service Providers
+         */
 
     ],
 

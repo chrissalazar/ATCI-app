@@ -6,10 +6,11 @@
     "type": "project",
     "require": {
         "php": "^7.1",
+        "barryvdh/laravel-ide-helper": "v2.5.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0",
         "laravel/passport": "^7.0",
+        "laravel/tinker": "^1.0",
         "laraveles/spanish": "^1.0",
         "spatie/laravel-permission": "2.*"
     },
